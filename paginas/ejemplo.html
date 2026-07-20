@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplo Práctico — ¿Cómo funciona la Web?</title>
+  <meta name="description" content="Mini página renderizada: ejemplo completo con encabezado, imagen, lista, tabla y formulario funcional." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="../css/estilos.css" />
+  <link rel="stylesheet" href="../css/personalizados.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar is-primary" role="navigation" aria-label="Menú principal">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-bold" href="../index.html">
+        🌐 ¿Cómo funciona la Web?
+      </a>
+      <a role="button" class="navbar-burger" aria-label="Abrir menú de navegación"
+         aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">🏠 Inicio</a>
+        <a class="navbar-item" href="solicitud.html">📡 Solicitud HTTP</a>
+        <a class="navbar-item" href="servidor.html">🖥️ Servidor</a>
+        <a class="navbar-item" href="renderizado.html">🎨 Renderizado</a>
+        <a class="navbar-item is-active" href="ejemplo.html">⚡ Ejemplo Práctico</a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://screenrec.com/share/xlcF5V6bKq"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Ver video explicativo (abre en nueva pestaña)">
+          ▶️ Ver Video
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero is-primary">
+  <div class="hero-body has-text-centered">
+    <p class="title is-2">⚡ Mini Página Renderizada</p>
+    <p class="subtitle is-5">
+      Esta es la página que el navegador renderiza después de recibir y procesar el HTML.
+    </p>
+
+    <div class="mt-3" style="max-width:380px;margin-inline:auto;">
+      <p class="has-text-white is-size-7 mb-1">Paso 5 de 5 — ¡Completado! 🎉</p>
+      <progress class="progress is-primary is-small" value="100" max="100"
+                aria-label="Progreso: página 5 de 5, completado">100%</progress>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENIDO -->
+<main class="section">
+  <div class="container">
+
+    <!-- Notification informativa -->
+    <div class="notification is-info is-light mb-5" role="note">
+      <span class="mr-2">🔍</span>
+      <strong>Esta es la página que el navegador renderiza</strong> después de recibir y procesar
+      el HTML devuelto por el servidor. Todo lo que ves aquí —encabezado, imagen, lista,
+      tabla y formulario— fue enviado como código HTML puro desde el servidor.
+    </div>
+
+    <!-- Simulación de navegador -->
+    <section class="mb-6" aria-labelledby="titulo-simulacion">
+      <h2 id="titulo-simulacion" class="title is-3 has-text-primary">
+        🖥️ Vista del Navegador
+      </h2>
+
+      <div>
+        <div class="browser-bar" aria-hidden="true">
+          <div class="browser-dot rojo"></div>
+          <div class="browser-dot amarillo"></div>
+          <div class="browser-dot verde"></div>
+          <div class="browser-url">🔒 https://como-funciona-la-web.ejemplo.com/resultado.html</div>
+        </div>
+        <div class="browser-content">
+
+          <!-- Encabezado principal (dentro del renderizado) -->
+          <article aria-label="Contenido renderizado por el navegador">
+
+            <div class="has-text-centered mb-5 p-5"
+                 style="background:linear-gradient(135deg,#dbeafe,#ede9fe);border-radius:12px;">
+              <h3 class="title is-3 has-text-primary">🌐 Bienvenido al Ciclo de la Web</h3>
+              <p class="subtitle is-6 has-text-grey">
+                Has completado el recorrido completo de una solicitud HTTP hasta el renderizado final.
+              </p>
+            </div>
+
+            <!-- Imagen -->
+            <section class="mb-5" aria-labelledby="titulo-arquitectura">
+              <h3 id="titulo-arquitectura" class="title is-4">🖼️ Arquitectura Cliente-Servidor</h3>
+              <figure class="image mb-4">
+                <img src="../img/cliente-servidor.png"
+                     alt="Diagrama de arquitectura cliente-servidor mostrando la comunicación bidireccional entre navegador y servidor"
+                     loading="lazy" />
+              </figure>
+              <p>
+                La arquitectura cliente-servidor es el modelo fundamental sobre el que funciona la Web.
+                El cliente (tu navegador) solicita recursos y el servidor los provee. Esta separación
+                permite que millones de usuarios accedan a la misma información simultáneamente.
+              </p>
+            </section>
+
+            <!-- Lista ordenada -->
+            <section class="mb-5" aria-labelledby="titulo-resumen">
+              <h3 id="titulo-resumen" class="title is-4">📋 Resumen: Los 5 pasos del ciclo web</h3>
+              <ol class="ml-4" style="list-style:decimal;line-height:2;">
+                <li>El usuario escribe una URL y presiona Enter en su navegador.</li>
+                <li>El navegador consulta el DNS para obtener la IP del servidor.</li>
+                <li>Se establece la conexión HTTP/HTTPS con el servidor remoto.</li>
+                <li>El servidor procesa la solicitud y devuelve el HTML, CSS y archivos.</li>
+                <li>El navegador renderiza el código y muestra la página en pantalla.</li>
+              </ol>
+            </section>
+
+            <!-- Tabla de información -->
+            <section class="mb-5" aria-labelledby="titulo-protocolos">
+              <h3 id="titulo-protocolos" class="title is-4">📊 Protocolos web y sus características</h3>
+              <div class="table-container">
+                <table class="table is-fullwidth is-striped is-hoverable"
+                       aria-label="Tabla de protocolos web con sus características">
+                  <thead>
+                    <tr>
+                      <th scope="col">Protocolo</th>
+                      <th scope="col">Puerto</th>
+                      <th scope="col">Seguridad</th>
+                      <th scope="col">Uso</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>HTTP/1.1</strong></td>
+                      <td>80</td>
+                      <td>❌ Sin cifrado</td>
+                      <td>Sitios legados, intranets</td>
+                    </tr>
+                    <tr>
+                      <td><strong>HTTPS</strong></td>
+                      <td>443</td>
+                      <td>✅ TLS/SSL</td>
+                      <td>Todos los sitios modernos</td>
+                    </tr>
+                    <tr>
+                      <td><strong>HTTP/2</strong></td>
+                      <td>443</td>
+                      <td>✅ TLS/SSL</td>
+                      <td>Multiplexación, compresión</td>
+                    </tr>
+                    <tr>
+                      <td><strong>HTTP/3</strong></td>
+                      <td>443</td>
+                      <td>✅ QUIC</td>
+                      <td>Conexiones ultra-rápidas</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- Texto descriptivo -->
+            <section class="mb-5" aria-labelledby="titulo-reflexion">
+              <h3 id="titulo-reflexion" class="title is-4">📝 Reflexión final</h3>
+              <p class="block">
+                Comprender cómo funciona la Web no solo es útil para desarrolladores: también permite
+                a cualquier usuario tomar mejores decisiones sobre su seguridad en línea, entender
+                por qué algunas páginas cargan más rápido que otras, y apreciar la increíble
+                infraestructura tecnológica que conecta al mundo.
+              </p>
+              <p class="block">
+                Cada vez que visitas una página web, estás participando en un sofisticado diálogo
+                entre tu dispositivo y computadoras repartidas por todo el planeta, en el que
+                millones de paquetes de datos viajan a la velocidad de la luz para entregarte
+                exactamente lo que buscas.
+              </p>
+            </section>
+
+            <!-- Formulario de contacto -->
+            <section aria-labelledby="titulo-formulario">
+              <h3 id="titulo-formulario" class="title is-4">✉️ ¿Tienes alguna pregunta?</h3>
+              <p class="block">Completa este formulario para enviarnos tu consulta sobre el funcionamiento de la Web.</p>
+
+              <div class="box">
+                <form id="contactForm" novalidate aria-label="Formulario de contacto">
+
+                  <div class="field">
+                    <label class="label" for="nombre">👤 Nombre</label>
+                    <div class="control has-icons-left">
+                      <input class="input" type="text" id="nombre" name="nombre"
+                             placeholder="Tu nombre completo"
+                             required autocomplete="name"
+                             aria-required="true" />
+                      <span class="icon is-small is-left" aria-hidden="true">👤</span>
+                    </div>
+                    <p class="help" id="nombre-help">Ingresa tu nombre completo.</p>
+                  </div>
+
+                  <div class="field">
+                    <label class="label" for="correo">📧 Correo electrónico</label>
+                    <div class="control has-icons-left">
+                      <input class="input" type="email" id="correo" name="correo"
+                             placeholder="tu@correo.com"
+                             required autocomplete="email"
+                             aria-required="true"
+                             aria-describedby="correo-help" />
+                      <span class="icon is-small is-left" aria-hidden="true">✉️</span>
+                    </div>
+                    <p class="help" id="correo-help">Ejemplo: usuario@dominio.com</p>
+                  </div>
+
+                  <div class="field">
+                    <label class="label" for="mensaje">💬 Mensaje</label>
+                    <div class="control">
+                      <textarea class="textarea" id="mensaje" name="mensaje"
+                                placeholder="Escribe aquí tu pregunta o comentario..."
+                                required rows="4"
+                                aria-required="true"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <div class="control">
+                      <button type="submit" class="button is-primary is-fullwidth">
+                        📨 Enviar mensaje
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Mensaje de éxito (oculto inicialmente) -->
+                  <div id="formSuccess" class="notification is-success is-light mt-3"
+                       hidden role="alert" aria-live="polite">
+                    <span class="mr-2">✅</span>
+                    <strong>¡Mensaje enviado exitosamente!</strong> Gracias por tu consulta.
+                  </div>
+
+                </form>
+              </div>
+            </section>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navegación -->
+    <div class="nav-paginas">
+      <a href="renderizado.html" class="button is-light">← Anterior: Renderizado</a>
+      <span class="has-text-grey is-size-6">Página 5 de 5 — ¡Completado! 🎉</span>
+      <a href="../index.html" class="button is-primary">🔄 Volver al inicio</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Proyecto educativo:</strong> ¿Cómo funciona la Web?
+      &nbsp;|&nbsp; Autor: <strong>Jorge Eras</strong>
+    </p>
+  </div>
+</footer>
+
+<script src="../js/navbar.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const nombre  = document.getElementById('nombre').value.trim();
+    const correo  = document.getElementById('correo').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+    if (!nombre || !correo || !mensaje) return;
+    const success = document.getElementById('formSuccess');
+    success.hidden = false;
+    this.reset();
+    success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>
+</body>
+</html>

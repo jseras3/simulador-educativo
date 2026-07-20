@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio — ¿Cómo funciona la Web?</title>
+  <meta name="description" content="Aprende visualmente cómo funciona la Web: desde que escribes una URL hasta que ves la página en tu navegador." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/personalizados.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<header>
+  <nav class="navbar is-primary" role="navigation" aria-label="Menú principal">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-bold" href="index.html">
+        🌐 ¿Cómo funciona la Web?
+      </a>
+      <a role="button" class="navbar-burger" aria-label="Abrir menú de navegación"
+         aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item is-active" href="index.html">🏠 Inicio</a>
+        <a class="navbar-item" href="paginas/solicitud.html">📡 Solicitud HTTP</a>
+        <a class="navbar-item" href="paginas/servidor.html">🖥️ Servidor</a>
+        <a class="navbar-item" href="paginas/renderizado.html">🎨 Renderizado</a>
+        <a class="navbar-item" href="paginas/ejemplo.html">⚡ Ejemplo Práctico</a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://screenrec.com/share/xlcF5V6bKq"
+           target="_blank" rel="noopener noreferrer" aria-label="Ver video explicativo (abre en nueva pestaña)">
+          ▶️ Ver Video
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero is-primary is-medium">
+  <div class="hero-body has-text-centered">
+    <p class="title is-1" role="heading" aria-level="1">
+      🌐 ¿Cómo funciona la Web?
+    </p>
+    <p class="subtitle is-5">
+      Descubre el viaje de una URL: desde que la escribes hasta que el navegador muestra la página.
+    </p>
+
+    <!-- Barra de progreso -->
+    <div class="mt-3" style="max-width:380px;margin-inline:auto;">
+      <p class="has-text-white is-size-7 mb-1">Paso 1 de 5</p>
+      <progress class="progress is-primary is-small" value="20" max="100"
+                aria-label="Progreso: página 1 de 5">20%</progress>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="section">
+  <div class="container">
+
+    <!-- Sección: ¿Qué ocurre? -->
+    <section class="mb-6" aria-labelledby="titulo-url">
+      <h2 id="titulo-url" class="title is-3 has-text-primary">
+        🌐 ¿Qué ocurre al ingresar una URL?
+      </h2>
+
+      <div class="columns is-vcentered">
+        <div class="column is-7">
+          <p class="block">
+            Cada vez que escribes una dirección web como
+            <strong>https://ejemplo.com</strong> y presionas Enter,
+            se desencadena un proceso increíble que ocurre en milisegundos.
+            El navegador se comunica con servidores repartidos por todo el mundo
+            para traerte la información que buscas.
+          </p>
+          <p class="block">
+            Este mini sitio te explica paso a paso ese viaje fascinante:
+            desde la solicitud inicial hasta que los píxeles aparecen en tu pantalla.
+          </p>
+        </div>
+        <div class="column is-5">
+          <figure class="image">
+            <img src="img/url.png"
+                 alt="Diagrama que muestra el ingreso de una URL en el navegador"
+                 loading="lazy" />
+          </figure>
+        </div>
+      </div>
+
+      <!-- Diagrama de flujo -->
+      <div class="flujo-web" role="img" aria-label="Flujo: Usuario → Navegador → Internet → Servidor → Respuesta">
+        <div class="flujo-nodo">
+          <span class="nodo-icon">👤</span>
+          <span>Usuario</span>
+        </div>
+        <span class="flujo-flecha" aria-hidden="true">→</span>
+        <div class="flujo-nodo">
+          <span class="nodo-icon">🌐</span>
+          <span>Navegador</span>
+        </div>
+        <span class="flujo-flecha" aria-hidden="true">→</span>
+        <div class="flujo-nodo">
+          <span class="nodo-icon">📡</span>
+          <span>Internet</span>
+        </div>
+        <span class="flujo-flecha" aria-hidden="true">→</span>
+        <div class="flujo-nodo">
+          <span class="nodo-icon">🖥️</span>
+          <span>Servidor</span>
+        </div>
+        <span class="flujo-flecha" aria-hidden="true">→</span>
+        <div class="flujo-nodo">
+          <span class="nodo-icon">📄</span>
+          <span>Respuesta</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Los 5 pasos -->
+    <section class="mb-6" aria-labelledby="titulo-pasos">
+      <h2 id="titulo-pasos" class="title is-3 has-text-primary">
+        📋 Pasos del proceso
+      </h2>
+      <p class="block">El viaje de una URL se puede resumir en cinco grandes pasos:</p>
+
+      <div class="columns is-multiline">
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <article class="card">
+            <div class="card-header">
+              <p class="card-header-title">
+                <span class="mr-2">1️⃣</span> Escribe la URL
+              </p>
+            </div>
+            <div class="card-content">
+              <p>El usuario escribe una URL y presiona Enter en el navegador.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <article class="card">
+            <div class="card-header">
+              <p class="card-header-title">
+                <span class="mr-2">2️⃣</span> Consulta DNS
+              </p>
+            </div>
+            <div class="card-content">
+              <p>El navegador consulta el <strong>DNS</strong> para traducir el dominio a una dirección IP.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <article class="card">
+            <div class="card-header">
+              <p class="card-header-title">
+                <span class="mr-2">3️⃣</span> Conexión HTTP
+              </p>
+            </div>
+            <div class="card-content">
+              <p>Se establece una conexión con el servidor usando <strong>HTTP/HTTPS</strong>.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-6-desktop">
+          <article class="card">
+            <div class="card-header">
+              <p class="card-header-title">
+                <span class="mr-2">4️⃣</span> Respuesta del servidor
+              </p>
+            </div>
+            <div class="card-content">
+              <p>El servidor procesa la solicitud y devuelve los archivos HTML, CSS e imágenes.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-6-desktop">
+          <article class="card">
+            <div class="card-header">
+              <p class="card-header-title">
+                <span class="mr-2">5️⃣</span> Renderizado
+              </p>
+            </div>
+            <div class="card-content">
+              <p>El navegador <strong>renderiza</strong> el código y muestra la página al usuario.</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Notification: dato curioso -->
+    <div class="notification is-info is-light" role="note">
+      <span class="mr-2">💡</span>
+      <strong>¿Sabías esto?</strong> Todo este proceso —desde que presionas Enter hasta que la página aparece—
+      puede ocurrir en <strong>menos de 200 milisegundos</strong>. ¡Más rápido que un parpadeo!
+      Los protocolos modernos como HTTP/2 y HTTP/3 lo hacen posible.
+    </div>
+
+    <!-- Navegación prev/next -->
+    <div class="nav-paginas">
+      <span></span>
+      <span class="has-text-grey is-size-6">Página 1 de 5</span>
+      <a href="paginas/solicitud.html" class="button is-primary">
+        Siguiente: Solicitud HTTP <span class="ml-2">→</span>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Proyecto educativo:</strong> ¿Cómo funciona la Web?
+      &nbsp;|&nbsp; Autor: <strong>Jorge Eras</strong>
+    </p>
+  </div>
+</footer>
+
+<script src="js/navbar.js"></script>
+</body>
+</html>

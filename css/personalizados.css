@@ -1,0 +1,114 @@
+/* personalizados.css — Sobrescrituras de Bulma*/
+
+/* ── Paleta personalizada: azul-morado ── */
+.navbar.is-primary,
+.hero.is-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+}
+
+.navbar.is-primary .navbar-item,
+.navbar.is-primary .navbar-brand .navbar-item,
+.navbar.is-primary a.navbar-item {
+  color: rgba(255,255,255,0.88);
+}
+
+.navbar.is-primary a.navbar-item:hover,
+.navbar.is-primary a.navbar-item.is-active {
+  background-color: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.navbar.is-primary .navbar-burger { color: #fff; }
+
+.hero.is-primary .title  { color: #fff; }
+.hero.is-primary .subtitle { color: rgba(255,255,255,0.85); }
+
+/* ── Botones primarios ── */
+.button.is-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-primary:hover,
+.button.is-primary:focus {
+  background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.35);
+}
+
+/* ── Cards con sombra mejorada ── */
+.card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(37,99,235,0.15);
+}
+
+.card-header-title { color: #1d4ed8; font-size: 1rem; }
+
+/* ── Footer personalizado ── */
+.footer {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  color: rgba(255,255,255,0.85);
+  padding: 2rem 1.5rem;
+}
+
+.footer p { color: rgba(255,255,255,0.85); }
+.footer strong { color: #fff; }
+.footer a { color: rgba(255,255,255,0.75); text-decoration: underline; }
+.footer a:hover { color: #fff; }
+
+/* ── Progress bar ── */
+.progress.is-primary { background-color: rgba(37,99,235,0.15); }
+.progress.is-primary::-webkit-progress-value {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+.progress.is-primary::-moz-progress-bar {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+
+/* ── Notification info personalizada ── */
+.notification.is-info.is-light {
+  background-color: #eff6ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 8px;
+  color: #1e40af;
+}
+
+/* ── Tags de métodos HTTP ── */
+.tag.is-http-get    { background: #dcfce7; color: #15803d; font-weight: 700; }
+.tag.is-http-post   { background: #dbeafe; color: #1d4ed8; font-weight: 700; }
+.tag.is-http-put    { background: #fef9c3; color: #854d0e; font-weight: 700; }
+.tag.is-http-delete { background: #fee2e2; color: #b91c1c; font-weight: 700; }
+
+/* ── Tablas ── */
+.table thead th {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  color: #fff;
+}
+
+/* ── Formulario de contacto ── */
+.input:focus, .textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.125em rgba(37,99,235,0.25);
+}
+
+/* ── Message component ── */
+.message.is-info .message-header {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+}
+
+/* ── Accesibilidad: focus visible ── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #7c3aed;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

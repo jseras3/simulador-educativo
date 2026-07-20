@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitud HTTP — ¿Cómo funciona la Web?</title>
+  <meta name="description" content="Aprende qué es HTTP, los métodos GET, POST, PUT y DELETE, y cómo el navegador hace peticiones al servidor." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="../css/estilos.css" />
+  <link rel="stylesheet" href="../css/personalizados.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar is-primary" role="navigation" aria-label="Menú principal">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-bold" href="../index.html">
+        🌐 ¿Cómo funciona la Web?
+      </a>
+      <a role="button" class="navbar-burger" aria-label="Abrir menú de navegación"
+         aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">🏠 Inicio</a>
+        <a class="navbar-item is-active" href="solicitud.html">📡 Solicitud HTTP</a>
+        <a class="navbar-item" href="servidor.html">🖥️ Servidor</a>
+        <a class="navbar-item" href="renderizado.html">🎨 Renderizado</a>
+        <a class="navbar-item" href="ejemplo.html">⚡ Ejemplo Práctico</a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://screenrec.com/share/xlcF5V6bKq"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Ver video explicativo (abre en nueva pestaña)">
+          ▶️ Ver Video
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero is-primary">
+  <div class="hero-body has-text-centered">
+    <p class="title is-2">📡 Solicitud HTTP</p>
+    <p class="subtitle is-5">
+      El lenguaje que usan los navegadores y servidores para comunicarse en la Web.
+    </p>
+
+    <div class="mt-3" style="max-width:380px;margin-inline:auto;">
+      <p class="has-text-white is-size-7 mb-1">Paso 2 de 5</p>
+      <progress class="progress is-primary is-small" value="40" max="100"
+                aria-label="Progreso: página 2 de 5">40%</progress>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENIDO -->
+<main class="section">
+  <div class="container">
+
+    <!-- ¿Qué es HTTP? -->
+    <section class="mb-6" aria-labelledby="titulo-http">
+      <h2 id="titulo-http" class="title is-3 has-text-primary">📡 ¿Qué es HTTP?</h2>
+
+      <div class="columns is-vcentered">
+        <div class="column is-7">
+          <p class="block">
+            <strong>HTTP</strong> (HyperText Transfer Protocol) es el protocolo de comunicación
+            que permite la transferencia de información en la Web. Cuando tu navegador quiere
+            obtener una página, envía una <em>solicitud HTTP</em> al servidor; el servidor
+            responde con los datos solicitados.
+          </p>
+          <p class="block">
+            La versión segura, <strong>HTTPS</strong>, cifra toda la comunicación usando TLS,
+            protegiendo tus datos de posibles interceptaciones. Hoy en día, todos los sitios
+            modernos deberían usar HTTPS.
+          </p>
+
+          <!-- Message: protocolo sin estado -->
+          <article class="message is-info" aria-label="Información importante sobre HTTP">
+            <div class="message-header">
+              <p>💡 Protocolo sin estado</p>
+            </div>
+            <div class="message-body">
+              HTTP es un protocolo <strong>sin estado</strong>: cada solicitud es independiente
+              y el servidor no "recuerda" solicitudes anteriores.
+              Por eso existen las <strong>cookies</strong> y <strong>sesiones</strong>.
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-5">
+          <figure class="image">
+            <img src="../img/ejemplo-http.png"
+                 alt="Diagrama de comunicación entre cliente (navegador) y servidor HTTP"
+                 loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Métodos HTTP -->
+    <section class="mb-6" aria-labelledby="titulo-metodos">
+      <h2 id="titulo-metodos" class="title is-3 has-text-primary">🔧 Métodos HTTP</h2>
+      <p class="block">
+        Los métodos HTTP definen la <strong>acción</strong> que el cliente quiere realizar
+        sobre un recurso del servidor. Son el vocabulario de la comunicación web.
+      </p>
+
+      <div class="table-container">
+        <table class="table is-fullwidth is-striped is-hoverable" aria-label="Tabla de métodos HTTP">
+          <thead>
+            <tr>
+              <th scope="col">Método</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Cuándo se usa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag is-http-get is-medium">GET</span></td>
+              <td>Obtiene un recurso del servidor sin modificarlo.</td>
+              <td>Cargar páginas, imágenes, descargar archivos.</td>
+            </tr>
+            <tr>
+              <td><span class="tag is-http-post is-medium">POST</span></td>
+              <td>Envía datos al servidor para crear un nuevo recurso.</td>
+              <td>Registrar usuario, enviar formulario, subir archivo.</td>
+            </tr>
+            <tr>
+              <td><span class="tag is-http-put is-medium">PUT</span></td>
+              <td>Reemplaza completamente un recurso existente.</td>
+              <td>Actualizar un perfil, reemplazar un documento.</td>
+            </tr>
+            <tr>
+              <td><span class="tag is-http-delete is-medium">DELETE</span></td>
+              <td>Elimina un recurso del servidor.</td>
+              <td>Borrar cuenta, eliminar publicación, quitar producto.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Ejemplo de petición HTTP -->
+    <section class="mb-6" aria-labelledby="titulo-ejemplo-http">
+      <h2 id="titulo-ejemplo-http" class="title is-3 has-text-primary">📨 Ejemplo de una petición HTTP</h2>
+      <p class="block">Así se ve una solicitud HTTP real cuando tu navegador pide una página web:</p>
+
+      <div class="code-block mb-4" role="region" aria-label="Ejemplo de solicitud HTTP">
+        <span class="c-keyword">GET</span> /pagina.html <span class="c-value">HTTP/1.1</span><br>
+        <span class="c-comment">Host: www.ejemplo.com</span><br>
+        <span class="c-comment">User-Agent: Mozilla/5.0 (Chrome/120)</span><br>
+        <span class="c-comment">Accept: text/html,application/xhtml+xml</span><br>
+        <span class="c-comment">Accept-Language: es-ES,es;q=0.9</span><br>
+        <span class="c-comment">Connection: keep-alive</span>
+      </div>
+
+      <article class="box" aria-labelledby="titulo-lineas">
+        <h3 id="titulo-lineas" class="title is-5">🔄 ¿Qué significan esas líneas?</h3>
+        <p>
+          La primera línea indica el <strong>método</strong> (GET), el <strong>recurso</strong>
+          solicitado (/pagina.html) y la <strong>versión</strong> del protocolo. Las siguientes
+          líneas son <em>cabeceras</em> que dan información adicional al servidor: el dominio,
+          el tipo de navegador, los idiomas aceptados, etc.
+        </p>
+      </article>
+
+      <div class="mt-4">
+        <p class="block">Para profundizar más, visita la documentación oficial de MDN Web Docs:</p>
+        <a href="https://developer.mozilla.org/es/docs/Web/HTTP"
+           target="_blank" rel="noopener noreferrer"
+           class="button is-primary"
+           aria-label="Documentación de HTTP en MDN Web Docs (abre en nueva pestaña)">
+          📚 Documentación HTTP en MDN →
+        </a>
+      </div>
+    </section>
+
+    <!-- Navegación -->
+    <div class="nav-paginas">
+      <a href="../index.html" class="button is-light">← Anterior: Inicio</a>
+      <span class="has-text-grey is-size-6">Página 2 de 5</span>
+      <a href="servidor.html" class="button is-primary">Siguiente: Servidor →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Proyecto educativo:</strong> ¿Cómo funciona la Web?
+      &nbsp;|&nbsp; Autor: <strong>Jorge Eras</strong>
+    </p>
+  </div>
+</footer>
+
+<script src="../js/navbar.js"></script>
+</body>
+</html>
